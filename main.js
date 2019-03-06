@@ -48,25 +48,7 @@ for(var c=0; c<brickColumnCount; c++) {
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 
-/*
-function keyDownHandler(e) {
-    if(e.key == "Right" || e.key == "ArrowRight") {
-        rightPressed = true;
-    }
-    else if(e.key == "Left" || e.key == "ArrowLeft") {
-        leftPressed = true;
-    }
-}
-function keyUpHandler(e) {
-    if(e.key == "Right" || e.key == "ArrowRight") {
-        rightPressed = false;
-    }
-    else if(e.key == "Left" || e.key == "ArrowLeft") {
-        leftPressed = false;
-    }
-}
-*/
-
+//FUNCIONES
 
 function gameOver(){
     clearInterval(interval)
@@ -109,6 +91,9 @@ function keyUpHandler(e) {
     }
 }
 
+
+//FUNCIONES AUXILIARES
+
 function collisionDetection() {
   for(var c=0; c<brickColumnCount; c++) {
     for(var r=0; r<brickRowCount; r++) {
@@ -139,7 +124,7 @@ function drawBall() {
     ctx.closePath();
 }
 
-//Paleta
+//paleta
 function drawPaddle() {
     ctx.beginPath();
     ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
@@ -148,6 +133,8 @@ function drawPaddle() {
     ctx.closePath();
 }
 
+
+//bloques
 function drawBricks() {
     for(var c=0; c<brickColumnCount; c++) {
       for(var r=0; r<brickRowCount; r++) {
@@ -166,6 +153,7 @@ function drawBricks() {
   }
 }
 
+//colisiones
 function draw() {
     ctx.clearRect(0,0, canvas.width, canvas.height);
     frames ++
@@ -216,14 +204,3 @@ startbtn.onclick=function (){
         audio.play()
     }
 }
-
- 
-
-
-
-//bloques
-//constructores
-//instancias
-//main fuctions
-//aux fuctions
-//listeners
