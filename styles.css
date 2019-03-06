@@ -2,6 +2,12 @@ canvas {
     background: black; 
 }
 
+body{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+
 section{
     display: flex;
     justify-content: space-around;
