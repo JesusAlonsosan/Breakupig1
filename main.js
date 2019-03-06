@@ -55,7 +55,6 @@ function gameOver(){
     ctx.font = "50px Arial"
     ctx.fillStyle = "white"
     ctx.fillText('GAME OVER',140,400)
-    ctx.fillText(enemies.length, 226,150)
 }
 
 function chamPeon(){
@@ -63,7 +62,6 @@ function chamPeon(){
     ctx.font = "50px Arial"
     ctx.fillStyle = "white"
     ctx.fillText('CHAMPION!!',140,400)
-    ctx.fillText(enemies.length, 226,150)
 }
 
 
