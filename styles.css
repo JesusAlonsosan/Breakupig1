@@ -1,12 +1,7 @@
-canvas { 
+canvas{ 
     background: black; 
 }
 
-body{
-    background-color: black;
-    width: 100%;
-    height: 100%;
-}
 
 section{
     display: flex;
@@ -28,4 +23,10 @@ button{
     border-color: greenyellow;
     text-align: center;
     color: magenta;
+}
+
+body{
+    background-color: black;
+    width: 100%;
+    height: 100%;
 }
