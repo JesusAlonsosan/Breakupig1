@@ -16,10 +16,11 @@ div{
     }
 
 button{
+    button{
     background-color: black;
     font-size: 50px;
     font-family: Arial, Helvetica, sans-serif;
-    border-color: greenyellow;
+    border: 8px solid magenta;
     text-align: center;
-    color: magenta;
+    color: greenyellow;
 }
