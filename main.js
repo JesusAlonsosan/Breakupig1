@@ -20,8 +20,8 @@ var dx = 6;
 var dy = -6;
 
 //paleta
-var paddleHeight = 20;
-var paddleWidth = 95;
+var paddleHeight = 10;
+var paddleWidth = 110;
 var paddleX = (canvas.width-paddleWidth)/2;
 var rightPressed = false;
 var leftPressed = false;
