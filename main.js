@@ -27,7 +27,7 @@ var rightPressed = false;
 var leftPressed = false;
 
 //bloques
-var brickRowCount = 5;
+var brickRowCount = 4;
 var brickColumnCount = 7;
 var brickWidth = 55;
 var brickHeight = 20;
@@ -35,14 +35,6 @@ var brickPadding = 20;
 var brickOffsetTop = 100;
 var brickOffsetLeft = 35;
 
-//bloques nuevos
-var bricks = [];
-for(var c=0; c<brickColumnCount; c++) {
-  bricks[c] = [];
-  for(var r=0; r<brickRowCount; r++) {
-    bricks[c][r] = { x: 0, y: 0, status: 1 };
-  }
-}
 
 //boton start game
 var startbtn=document.getElementById("start") 
@@ -66,6 +58,16 @@ startbtn.onclick=function (){
 var endAudio = new Audio();
 endAudio.src = "./Audio/Jean-Michel Jarre - Equinoxe Pt. 4.mp3";
 endAudio.loop = false;
+
+
+//bricks nuevos
+var bricks = [];
+for(var c=0; c<brickColumnCount; c++) {
+  bricks[c] = [];
+  for(var r=0; r<brickRowCount; r++) {
+    bricks[c][r] = { x: 0, y: 0, status: 1 };
+  }
+}
 
 
 
@@ -216,4 +218,3 @@ function drawBricks() {
     }
   }
 }
-
