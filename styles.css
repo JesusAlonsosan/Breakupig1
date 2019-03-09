@@ -1,9 +1,3 @@
-canvas { 
-    background: black; 
-    outline-style: solid;
-    outline-color: aqua;
-}
-
 body{
     background-color: black;
 }
@@ -19,7 +13,7 @@ div{
     flex-direction: column;
     justify-content: center;
     widows: 2px;
-    }
+}
 
 button{
     background-color: black;
@@ -28,4 +22,10 @@ button{
     border: 3.5px solid magenta;
     text-align: center;
     color: greenyellow;
+}
+
+canvas { 
+    background: black; 
+    outline-style: solid;
+    outline-color: aqua;
 }
