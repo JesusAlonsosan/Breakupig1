@@ -19,7 +19,7 @@ button{
     background-color: black;
     font-size: 50px;
     font-family: Arial, Helvetica, sans-serif;
-    border: 8px solid magenta;
+    border: 3px solid magenta;
     text-align: center;
     color: greenyellow;
 }
