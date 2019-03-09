@@ -27,7 +27,7 @@ var rightPressed = false;
 var leftPressed = false;
 
 //bloques
-var brickRowCount = 4;
+var brickRowCount = 5;
 var brickColumnCount = 7;
 var brickWidth = 55;
 var brickHeight = 20;
