@@ -3,6 +3,7 @@ body{
 }
 
 section{
+    margin-top: 100px;
     display: flex;
     justify-content: space-around;
     background-color: black;
@@ -17,15 +18,67 @@ div{
 
 button{
     background-color: black;
-    font-size: 40px;
+    font-size: 35px;
     font-family: Arial, Helvetica, sans-serif;
     border: 3.5px solid magenta;
     text-align: center;
     color: greenyellow;
+    margin-right: 110px;
 }
 
 canvas { 
+    display: flex;
     background: black; 
     outline-style: solid;
     outline-color: aqua;
+    margin-right: 320px;
+}
+
+h2{
+    color: greenyellow;
+    display: flex;
+    justify-content: center;
+}
+
+h3{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(4, 210, 247);
+    justify-content: center;
+    margin-top: 5px;
+    font-size: 55px;
+}
+
+h4{
+    color: greenyellow;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+
+
+blockquote{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 28px;    
+    text-align: justify;
+}
+
+.casa{
+    display: flex;
+    margin-top: 60px;
+    margin-left: 80px;
+
+}
+
+img{
+    display: flexbox;
+    margin-top: 180px;
+    margin-left: 250px;
+    margin-right: 80px;
+    -webkit-transform:rotate(220deg);
+    -moz-transform: rotate(220deg);
+    -ms-transform: rotate(220deg);
+    -o-transform: rotate(220deg);
+    transform: rotate(220deg);
 }
