@@ -14,7 +14,7 @@ var velocity = 1000/40
 //pelota
 var score = 0
 var ballRadius = 7;
-var x = canvas.width/3; 
+var x = canvas.width/2; 
 var y = canvas.height-30;
 var dx = 6;
 var dy = -6;
@@ -50,7 +50,9 @@ startbtn.onclick=function (){
 //boton reset
 var startbtn=document.getElementById("restart")
 startbtn.onclick=function (){
-        location.reload(true);
+        location.reload(true);{
+        requestFullscreen(false);
+        }
         
 }
 
@@ -81,7 +83,7 @@ function gameOver(){
     clearInterval(interval)
     ctx.font = "50px Arial"
     ctx.fillStyle = "white"
-    ctx.fillText('GAME OVER',140,380)
+    ctx.fillText('GAME OVER',140,330)
     ctx.fillText(enemies.length, 226,150)
     
 }
@@ -91,14 +93,14 @@ function chamPeon(){
     clearInterval(interval)
     ctx.font = "50px Arial"
     ctx.fillStyle = "white"
-    ctx.fillText('CHAMPION!!',140,330)
+    ctx.fillText('CHAMPION!!',140,400)
     ctx.fillText(enemies.length, 226,150)
 }
 
 //puntuacion
 function drawScore() {
     ctx.font = "45px Arial";
-    ctx.fillStyle = "#E9E4E8";
+    ctx.fillStyle = "#ffffff";
     ctx.fillText("" + score, 280, 60);
 }
 
@@ -115,7 +117,7 @@ function drawBall() {
 function drawPaddle() {
     ctx.beginPath();
     ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-    ctx.fillStyle = "#E721A0";
+    ctx.fillStyle = "#d500ea";
     ctx.fill();
     ctx.closePath();
 }
@@ -218,3 +220,43 @@ function drawBricks() {
     }
   }
 }
+
+//fullscreen
+if (!Element.prototype.requestFullscreen) {
+    Element.prototype.requestFullscreen = 
+    Element.prototype.mozRequestFullscreen || 
+    Element.prototype.webkitRequestFullscreen || 
+    Element.prototype.msRequestFullscreen;
+}
+if (!document.exitFullscreen) {
+    document.exitFullscreen = document.mozExitFullscreen || 
+    document.webkitExitFullscreen || 
+    document.msExitFullscreen;
+}
+if (!document.fullscreenElement) {
+
+    Object.defineProperty(document, 'fullscreenElement', {
+        get: function() {
+            return document.mozFullScreenElement || 
+            document.msFullscreenElement || 
+            document.webkitFullscreenElement;
+        }
+    });
+
+    Object.defineProperty(document, 'fullscreenEnabled', {
+        get: function() {
+            return document.mozFullScreenEnabled || 
+            document.msFullscreenEnabled || 
+            document.webkitFullscreenEnabled;
+        }
+    });
+}
+document.addEventListener('click', function (event) {
+    if (!event.target.hasAttribute('bigscreen')) return;
+    if (document.fullscreenElement) {
+        document.exitFullscreen();
+    } else {
+        document.documentElement.requestFullscreen();
+    }
+
+}, false);
