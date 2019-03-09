@@ -81,7 +81,7 @@ function gameOver(){
     clearInterval(interval)
     ctx.font = "50px Arial"
     ctx.fillStyle = "white"
-    ctx.fillText('GAME OVER',140,400)
+    ctx.fillText('GAME OVER',140,330)
     ctx.fillText(enemies.length, 226,150)
     
 }
