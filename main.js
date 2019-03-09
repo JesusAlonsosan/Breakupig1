@@ -204,3 +204,9 @@ startbtn.onclick=function (){
         audio.play()
     }
 }
+
+//boton reset
+var startbtn=document.getElementById("restart")
+startbtn.onclick=function (){
+        location.reload(true);
+}
