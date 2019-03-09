@@ -64,7 +64,7 @@ startbtn.onclick=function (){
 
 //audio
 var endAudio = new Audio();
-endAudio.src = "./Audio/Battletoads in Battlemaniacs - Victory.mp3";
+endAudio.src = "./Audio/Jean-Michel Jarre - Equinoxe Pt. 4.mp3";
 endAudio.loop = false;
 
 
