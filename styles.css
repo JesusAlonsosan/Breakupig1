@@ -1,5 +1,7 @@
 canvas { 
     background: black; 
+    outline-style: solid;
+    outline-color: aqua;
 }
 
 section{
@@ -23,10 +25,3 @@ button{
     text-align: center;
     color: greenyellow;
 }
-
-canvas { 
-    background: black; 
-    outline-style: solid;
-    outline-color: aqua;
-}
-
