@@ -163,6 +163,8 @@ function draw() {
     drawPaddle();
     collisionDetection();
     drawScore();
+    audio.pause();
+    endAudio.play();
 
     if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
         dx = -dx;
@@ -197,7 +199,6 @@ function draw() {
 var startbtn=document.getElementById("start") 
 startbtn.onclick=function (){
     interval = setInterval(draw,velocity)
-
     audio=new Audio()
     audio.src="./Audio/scsi-9-eclair-de-lune.mp3"
     audio.onload=function(){
@@ -210,3 +211,7 @@ var startbtn=document.getElementById("restart")
 startbtn.onclick=function (){
         location.reload(true);
 }
+
+var endAudio = new Audio();
+endAudio.src = "./Audio/Battletoads in Battlemaniacs - Victory.mp3";
+endAudio.loop = false;
