@@ -4,6 +4,10 @@ canvas {
     outline-color: aqua;
 }
 
+body{
+    background-color: black;
+}
+
 section{
     display: flex;
     justify-content: space-around;
